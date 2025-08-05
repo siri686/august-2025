@@ -11,21 +11,7 @@ def decToBinary(self, n):
             n = n//2 
         return res[::-1]  
 
-'''#conversion(method 2)
+#conversion(method 2)
 n=13
-print(bin(n)[2::])'''
+print(bin(n)[2::])
 
-
-
-#binary to int
-'''def binary_to_int(binary_str):
-    decimal = 0
-    power = 0
-    for digit in reversed(binary_str):
-        if digit == '1':
-            decimal += 2 ** power
-        power += 1
-    return decimal
-binary = input("Enter a binary number: ")
-print("Decimal value is:", binary_to_int(binary))'''
- 
