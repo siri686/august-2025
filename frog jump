@@ -1,0 +1,15 @@
+def frogJump(n,heights):
+    def backtrack(index,heights):
+        if(index==0):
+            return 0
+        onejump=backtrack(index-1,heights)+abs(heights[index]-heights[index-1])
+        twojump=float("inf")
+        if(index>1):
+            twojump=backtrack(index-2,heights)+abs(heights[index]-heights[index-2])
+        return min(onejump,twojump)
+
+    index=n-1
+    return backtrack(index,heights)
+n=int(input())
+heights=list(map(int,input().split()))
+print(frogJump(n, heights))
